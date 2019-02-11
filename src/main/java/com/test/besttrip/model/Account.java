@@ -1,10 +1,21 @@
 package com.test.besttrip.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "ACCOUNT")
 public class Account {
 
+    @Id
+    @Column(name = "LOGIN")
     private String login;
 
+    @Column(name = "PASSWORD")
     private String password;
+
+    @Column(name = "TYPE")
+    @Enumerated(EnumType.STRING)
+    private AccountType type;
 
     public Account(String login, String password) {
         this.login = login;
@@ -25,5 +36,13 @@ public class Account {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public AccountType getType() {
+        return type;
+    }
+
+    public void setType(AccountType type) {
+        this.type = type;
     }
 }
