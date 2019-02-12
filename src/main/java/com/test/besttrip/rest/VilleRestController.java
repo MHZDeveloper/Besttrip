@@ -4,10 +4,7 @@ import com.test.besttrip.model.Ville;
 import com.test.besttrip.service.VilleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class VilleRestController {
@@ -34,4 +31,15 @@ public class VilleRestController {
     public Ville getVilleByName(@PathVariable("name") String name){
         return villeService.getVilleByName(name);
     }
+
+    //TODO
+//    @RequestMapping(
+//            method = RequestMethod.POST,
+//            path = "/api/besttrip/villes",
+//            consumes = MediaType.APPLICATION_JSON_VALUE
+//    )
+//    public void createVille(@RequestBody Ville ville){
+//        villeService.createVille(ville);
+//    }
+
 }

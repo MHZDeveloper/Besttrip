@@ -11,9 +11,8 @@ import java.util.List;
 public class Ville {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "VILLE_ID")
-    private int id;
+    private String id;
 
     @Column(name = "NAME")
     private String name;
@@ -27,15 +26,15 @@ public class Ville {
 
     public Ville(){}
 
-    public Ville(int id) {
+    public Ville(String id) {
         this.id = id;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
