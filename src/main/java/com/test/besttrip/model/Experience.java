@@ -19,12 +19,7 @@ public class Experience {
     @JsonBackReference
     private Ville ville;
 
-    @ManyToOne
-    @JoinColumn(name ="LOGIN")
-    @JsonBackReference
-    private Ville login;
-
-    @ElementCollection
+    @ElementCollection //collection
     @CollectionTable(name = "ACTIVITIES")
     private List<String> activites;
 
@@ -78,13 +73,5 @@ public class Experience {
 
     public void setVille(Ville ville) {
         this.ville = ville;
-    }
-
-    public Ville getLogin() {
-        return login;
-    }
-
-    public void setLogin(Ville login) {
-        this.login = login;
     }
 }
