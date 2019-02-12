@@ -20,7 +20,7 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private AccountType type;
 
-    @OneToMany(mappedBy = "login", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "id", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Experience> experiences;
 
