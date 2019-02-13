@@ -20,14 +20,17 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private AccountType type;
 
-    @OneToMany(mappedBy = "login", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "expId", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Experience> experiences;
 
-    public Account(String login, String password) {
+    public Account(String login, String password,AccountType accountType) {
         this.login = login;
         this.password = password;
+        this.type = accountType;
     }
+
+    public Account(){}
 
     public String getLogin() {
         return login;

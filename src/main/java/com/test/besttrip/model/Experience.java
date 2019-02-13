@@ -12,48 +12,46 @@ public class Experience {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="EXP_ID")
-    private int id;
+    private int expId;
 
-    @ManyToOne
-    @JoinColumn(name ="VILLE_ID")
-    @JsonBackReference
-    private Ville ville;
+    @Column(name = "VILLE_NAME")
+    private String villeName;
+
+    @Column(name = "COUNTRY")
+    private String country;
 
     @ManyToOne
     @JoinColumn(name ="LOGIN")
     @JsonBackReference
-    private Ville login;
+    private Account account;
 
-    @ElementCollection
-    @CollectionTable(name = "ACTIVITIES")
-    private List<String> activites;
+    @CollectionTable(name = "DESCRIPTION")
+    private String description;
 
     @ElementCollection
     @CollectionTable(name = "PHOTOS")
     private List<String> photos;
 
-    @Column(name = "RECOMMANDATION")
-    @ElementCollection
-    private List<Integer> recommandation;
+    @JoinColumn(name = "RECOMMANDATION_MEAN")
+    private double moyenneRecommandation;
 
-    public Experience(int id) {
-        this.id = id;
+    @JoinColumn(name = "RECOMMANDATION_NUMBER")
+    private int recommandationNumber;
+
+
+
+    public Experience(int expId) {
+        this.expId = expId;
     }
 
-    public int getId() {
-        return id;
+    public Experience (){}
+
+    public int getExpId() {
+        return expId;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public List<String> getActivites() {
-        return activites;
-    }
-
-    public void setActivites(List<String> activites) {
-        this.activites = activites;
+    public void setExpId(int expId) {
+        this.expId = expId;
     }
 
     public List<String> getPhotos() {
@@ -64,27 +62,51 @@ public class Experience {
         this.photos = photos;
     }
 
-    public List<Integer> getRecommandation() {
-        return recommandation;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setRecommandation(List<Integer> recommandation) {
-        this.recommandation = recommandation;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
-    public Ville getVille() {
-        return ville;
+    public String getDescription() {
+        return description;
     }
 
-    public void setVille(Ville ville) {
-        this.ville = ville;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public Ville getLogin() {
-        return login;
+    public String getVilleName() {
+        return villeName;
     }
 
-    public void setLogin(Ville login) {
-        this.login = login;
+    public void setVilleName(String villeName) {
+        this.villeName = villeName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public double getMoyenneRecommandation() {
+        return moyenneRecommandation;
+    }
+
+    public void setMoyenneRecommandation(double moyenneRecommandation) {
+        this.moyenneRecommandation = moyenneRecommandation;
+    }
+
+    public int getRecommandationNumber() {
+        return recommandationNumber;
+    }
+
+    public void setRecommandationNumber(int recommandationNumber) {
+        this.recommandationNumber = recommandationNumber;
     }
 }
