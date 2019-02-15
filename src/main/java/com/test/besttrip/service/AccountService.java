@@ -4,6 +4,7 @@ import com.test.besttrip.model.Account;
 import com.test.besttrip.model.AccountType;
 import com.test.besttrip.model.Experience;
 import com.test.besttrip.model.repository.AccountRepository;
+import com.test.besttrip.service.exception.ExistingLoginException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +27,12 @@ public class AccountService {
     }
 
     public void createAccount(Account account){
-        accountRepository.save(account);
+        if(getAccount(account.getLogin()) != null){
+            accountRepository.save(account);
+        }
+        else{
+            throw new ExistingLoginException("Existing Login");
+        }
     }
 
 

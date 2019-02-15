@@ -1,12 +1,15 @@
 package com.test.besttrip.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+@Entity(name = "ACCOUNT")
 @Table(name = "ACCOUNT")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "login")
 public class Account {
 
     @Id
@@ -20,17 +23,16 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private AccountType type;
 
-    @OneToMany(mappedBy = "expId", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Experience> experiences;
+
+    public Account(){}
 
     public Account(String login, String password,AccountType accountType) {
         this.login = login;
         this.password = password;
         this.type = accountType;
     }
-
-    public Account(){}
 
     public String getLogin() {
         return login;

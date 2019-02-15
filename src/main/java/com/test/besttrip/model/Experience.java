@@ -1,12 +1,15 @@
 package com.test.besttrip.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+@Entity(name = "EXPERIENCE")
 @Table(name = "EXPERIENCE")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "expId")
 public class Experience {
 
     @Id
@@ -14,31 +17,38 @@ public class Experience {
     @Column(name="EXP_ID")
     private int expId;
 
+    @ManyToOne
+    @JoinColumn(name ="ID")
+    private Account account;
+
     @Column(name = "VILLE_NAME")
     private String villeName;
 
     @Column(name = "COUNTRY")
     private String country;
 
-    @ManyToOne
-    @JoinColumn(name ="LOGIN")
-    @JsonBackReference
-    private Account account;
 
-    @CollectionTable(name = "DESCRIPTION")
+    @Column(name = "DESCRIPTION")
     private String description;
 
     @ElementCollection
     @CollectionTable(name = "PHOTOS")
     private List<String> photos;
 
-    @JoinColumn(name = "RECOMMANDATION_MEAN")
-    private double moyenneRecommandation;
+    @Column(name = "RECOMMANDATION_SUM")
+    private int sommeRecommandation;
 
-    @JoinColumn(name = "RECOMMANDATION_NUMBER")
+    @Column(name = "RECOMMANDATION_NUMBER")
     private int recommandationNumber;
 
 
+    public double getMeanRecommandation(){
+        return sommeRecommandation/recommandationNumber;
+    }
+
+    public double updateMeanRecommandation(int rank){
+        return (sommeRecommandation+rank)/(recommandationNumber++);
+    }
 
     public Experience(int expId) {
         this.expId = expId;
@@ -94,12 +104,12 @@ public class Experience {
         this.country = country;
     }
 
-    public double getMoyenneRecommandation() {
-        return moyenneRecommandation;
+    public int getSommeRecommandation() {
+        return sommeRecommandation;
     }
 
-    public void setMoyenneRecommandation(double moyenneRecommandation) {
-        this.moyenneRecommandation = moyenneRecommandation;
+    public void setSommeRecommandation(int moyenneRecommandation) {
+        this.sommeRecommandation = moyenneRecommandation;
     }
 
     public int getRecommandationNumber() {
