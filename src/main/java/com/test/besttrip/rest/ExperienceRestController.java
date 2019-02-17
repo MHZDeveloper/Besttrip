@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 public class ExperienceRestController {
 
@@ -25,11 +27,40 @@ public class ExperienceRestController {
         return experienceService.getExperiences();
     }
 
-    //TODO
-    //get experience by villeName
 
-    //TODO
+
+
+
+
+
+    //TODO  //Done //Beta
+    //get experience by villeName
+    @RequestMapping(
+             method = RequestMethod.GET ,
+             path="/api/besttrip/experiences/ville={villeD}")
+    public ArrayList<Experience> getExperiencesByVille(@PathVariable("villeD") String ville){
+        return experienceService.getExperienceByVilleName(ville);
+}
+
+
+
+    //TODO //Done //Beta
     //get experiences by country
+
+
+    @RequestMapping(
+            method = RequestMethod.GET ,
+            path="/api/besttrip/experiences/country={country}"
+    )
+
+    public ArrayList<Experience> getExperiencesByCountry(@PathVariable("country") String country) {
+        return experienceService.getExperienceByCountry(country);
+    }
+
+
+
+
+
 
     @RequestMapping(
             method = RequestMethod.POST,
@@ -46,4 +77,9 @@ public class ExperienceRestController {
     public void updateExperience(@PathVariable("expId") int id,@RequestBody Experience experience){
         experienceService.updateExperience(id,experience);
     }
+
+
+
 }
+
+

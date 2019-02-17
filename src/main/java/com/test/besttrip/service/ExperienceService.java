@@ -6,6 +6,8 @@ import com.test.besttrip.service.exception.BadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+
 public class ExperienceService {
 
     private static final Logger log = LoggerFactory.getLogger(ExperienceService.class);
@@ -22,12 +24,62 @@ public class ExperienceService {
         return experienceRepository.findAll();
     }
 
-    public Experience getExperienceByVilleName(String villeName) {
-        return experienceRepository.findByVilleName(villeName);
+    public Experience getOneExperienceByVilleName(String villeName) {
+        return experienceRepository.findOneByCountry(villeName);
     }
 
-    //TODO
+
+
+    public ArrayList<Experience> getExperienceByVilleName(String villeName) {
+        return experienceRepository.findByVilleName(villeName);
+    }
+    public ArrayList<Experience> findByVilleName(String name){
+
+
+
+
+            Iterable <Experience> exp = getExperiences();
+            ArrayList<Experience> exp_ville = new ArrayList<Experience>() ;
+
+            exp.forEach( experience -> {
+
+                if (experience.getVilleName().equals(name)) {
+
+                    exp_ville.add(experience);
+                }
+            });
+
+            return exp_ville;
+
+    }
+
+
+    //TODO //Done //Beta
     //get experiences by country
+
+    public ArrayList<Experience> getExperienceByCountry(String country) {
+        return experienceRepository.findByCountry(country);
+    }
+
+
+
+    public ArrayList<Experience> findByCountry(String name){
+
+        Iterable <Experience> exp = getExperiences();
+        ArrayList<Experience> exp_country = new ArrayList<Experience>() ;
+
+        exp.forEach( experience -> {
+
+            if (experience.getCountry().equals(name)) {
+
+                exp_country.add(experience);
+            }
+        });
+        return exp_country;
+    }
+
+
+
 
     public void createExperience(Experience experience) {
         log.info("[an experience is created in "+experience.getVilleName()+"("+experience.getCountry()+")]");

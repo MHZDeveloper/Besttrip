@@ -7,13 +7,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class ExperienceServiceTest {
 
@@ -63,9 +60,9 @@ public class ExperienceServiceTest {
         //given
         Experience experience = new Experience();
         experience.setVilleName("Tunis");
-        Mockito.doReturn(experience).when(experienceRepository).findByVilleName("Tunis");
+        Mockito.doReturn(experience).when(experienceRepository).findByCountry("Tunis");
         //when
-        Experience result = experienceService.getExperienceByVilleName("Tunis");
+        Experience result = experienceService.getOneExperienceByVilleName("Tunis");
         //then
         Assert.assertNotNull(result.getExpId());
         Assert.assertEquals("Tunis",result.getVilleName());

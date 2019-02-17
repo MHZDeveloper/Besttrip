@@ -1,0 +1,152 @@
+GET http://localhost:8080/api/besttrip/experiences?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084741.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/country=Maroc?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084731.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/ville=Casablanca?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084711.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/ville=Casablanca?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084130.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084045.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/ville=Casablanca?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084038.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/ville=Casablanca?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084036.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/ville=Tunis?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T084010.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/country=Maroc?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T083942.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/country=Tunis?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T083935.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/Casablanca?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T073832.500.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T073703.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/?villeD=Casablanca
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T073605.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T073524.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/exeriences
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-17T073503.404.json
+
+###
+
+GET http://localhost:8080/api/besttrip/accounts
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-16T083351.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-16T083341.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-16T053758.200.json
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-16T053658.404.json
+
+###
+

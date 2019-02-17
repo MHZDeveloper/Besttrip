@@ -4,6 +4,7 @@ import com.test.besttrip.model.Account;
 import com.test.besttrip.model.AccountType;
 import com.test.besttrip.model.Experience;
 import com.test.besttrip.model.repository.AccountRepository;
+import com.test.besttrip.service.exception.BadRequestException;
 import com.test.besttrip.service.exception.ExistingLoginException;
 
 import java.util.ArrayList;
@@ -35,12 +36,23 @@ public class AccountService {
         }
     }
 
-    //TODO
+    //TODO //Done //Beta
     //update account
 
+    public void updateAccount(String login, Account account) {
+        if (login == account.getLogin()) {
+            accountRepository.save(account);
+        }
+        else {
+            throw new BadRequestException("Bad Request");
+        }
+    }
 
-    //TODO
+    //TODO //Done //Beta
     //delete account
+    public void deleteExperience(String Login, Account account) {
+        accountRepository.delete(account);
+    }
 
 
 }
