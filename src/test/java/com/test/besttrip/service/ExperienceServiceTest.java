@@ -33,6 +33,7 @@ public class ExperienceServiceTest {
         //given
         Experience experience = new Experience();
         experience.setVilleName("Tunis");
+        experience.setCountry("Tunisie");
         //when
         experienceService.createExperience(experience);
         //then
@@ -57,7 +58,7 @@ public class ExperienceServiceTest {
     }
 
     @Test
-    public void should_return_experience_by_name_from_database(){
+    public void should_return_experience_by_name_from_database() {
         //given
         Experience experience = new Experience();
         experience.setVilleName("Tunis");

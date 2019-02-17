@@ -2,11 +2,14 @@ package com.test.besttrip.service;
 
 import com.test.besttrip.model.Account;
 import com.test.besttrip.model.AccountType;
+import com.test.besttrip.model.Experience;
 import com.test.besttrip.model.repository.AccountRepository;
 import com.test.besttrip.service.exception.ExistingLoginException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.Arrays;
@@ -38,5 +41,7 @@ public class AccountServiceTest {
         Assert.assertEquals("login",result.get(0).getLogin());
     }
 
+
+    
 
 }

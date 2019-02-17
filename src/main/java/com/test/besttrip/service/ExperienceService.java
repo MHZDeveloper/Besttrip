@@ -25,13 +25,19 @@ public class ExperienceService {
         return experienceRepository.findByVilleName(villeName);
     }
 
+    //TODO
+    //get experiences by country
+
     public void createExperience(Experience experience) {
         log.info("[an experience is created in "+experience.getVilleName()+"("+experience.getCountry()+")]");
         experienceRepository.save(experience);
     }
 
     public void updateExperience(int id, Experience experience) {
-        experienceRepository.save(experience);
+        if (id == experience.getExpId()) {
+            experienceRepository.save(experience);
+        }
+        //else throw exception
     }
 
     public void deleteExperience(int id, Experience experience) {

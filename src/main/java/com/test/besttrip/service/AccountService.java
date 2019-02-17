@@ -27,13 +27,20 @@ public class AccountService {
     }
 
     public void createAccount(Account account){
-        if(getAccount(account.getLogin()) != null){
+        if(getAccount(account.getLogin()) == null){
             accountRepository.save(account);
         }
         else{
             throw new ExistingLoginException("Existing Login");
         }
     }
+
+    //TODO
+    //update account
+
+
+    //TODO
+    //delete account
 
 
 }
