@@ -2,6 +2,7 @@ package com.test.besttrip.service;
 
 import com.test.besttrip.model.Experience;
 import com.test.besttrip.model.repository.ExperienceRepository;
+import com.test.besttrip.service.exception.BadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,10 +38,14 @@ public class ExperienceService {
         if (id == experience.getExpId()) {
             experienceRepository.save(experience);
         }
-        //else throw exception
+        else {
+            throw new BadRequestException("Bad Request");
+        }
     }
 
     public void deleteExperience(int id, Experience experience) {
         experienceRepository.delete(experience);
     }
+
+
 }

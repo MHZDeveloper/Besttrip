@@ -2,6 +2,7 @@ package com.test.besttrip.service;
 
 import com.test.besttrip.model.Experience;
 import com.test.besttrip.model.repository.ExperienceRepository;
+import com.test.besttrip.service.exception.BadRequestException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -68,6 +69,15 @@ public class ExperienceServiceTest {
         //then
         Assert.assertNotNull(result.getExpId());
         Assert.assertEquals("Tunis",result.getVilleName());
+    }
+
+    @Test(expected = BadRequestException.class)
+    public void should_return_exception_when_id_is_not_equal_to_body_id(){
+        //given
+        Experience experience = new Experience();
+        experience.setExpId(1);
+        //when
+        experienceService.updateExperience(2,experience);
     }
 
 }

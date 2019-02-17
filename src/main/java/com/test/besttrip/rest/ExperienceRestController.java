@@ -39,4 +39,11 @@ public class ExperienceRestController {
     public void createExperience(@RequestBody Experience experience){
         experienceService.createExperience(experience);
     }
+
+    @RequestMapping(method = RequestMethod.PUT,
+            path = "/api/besttrip/experiences/{expId}",
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public void updateExperience(@PathVariable("expId") int id,@RequestBody Experience experience){
+        experienceService.updateExperience(id,experience);
+    }
 }

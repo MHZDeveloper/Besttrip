@@ -17,13 +17,13 @@ import java.util.List;
 
 public class AccountServiceTest {
 
-    AccountService accountService;
-    AccountRepository accountRepository;
+    private AccountService accountService;
+    private AccountRepository accountRepository;
 
     @Before
     public void before(){
         accountRepository = Mockito.mock(AccountRepository.class);
-        accountService = Mockito.mock(AccountService.class);
+        accountService = new AccountService(accountRepository);
     }
 
     @Test
@@ -42,6 +42,14 @@ public class AccountServiceTest {
     }
 
 
-    
+    @Test(expected = ExistingLoginException.class)
+    public void should_return_exception_when_creating_an_existing_account(){
+        //given
+        Account account = new Account("login","password",AccountType.USER);
+        Mockito.doReturn(account).when(accountRepository).findByLogin("login");
+        //when
+        accountService.createAccount(account);
+    }
+
 
 }
