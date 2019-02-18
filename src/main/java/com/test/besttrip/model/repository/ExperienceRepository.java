@@ -4,10 +4,11 @@ import com.test.besttrip.model.Experience;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public interface ExperienceRepository extends CrudRepository<Experience,String> {
-    Experience findOneByCountry(String name);
-    ArrayList<Experience> findByCountry(String name);
-    ArrayList<Experience> findByVilleName(String name);
+
+    List<Experience> findByCountry(String name);
+    List<Experience> findByVilleName(String name);
 }

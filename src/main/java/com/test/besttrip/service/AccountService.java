@@ -40,7 +40,7 @@ public class AccountService {
     //update account
 
     public void updateAccount(String login, Account account) {
-        if (login == account.getLogin()) {
+        if (login.equals(account.getLogin())) {
             accountRepository.save(account);
         }
         else {

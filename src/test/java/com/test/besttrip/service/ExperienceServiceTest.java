@@ -10,6 +10,7 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ExperienceServiceTest {
@@ -56,16 +57,17 @@ public class ExperienceServiceTest {
     }
 
     @Test
-    public void should_return_experience_by_name_from_database() {
+    public void should_return_experience_by_country_from_database() {
         //given
         Experience experience = new Experience();
-        experience.setVilleName("Tunis");
-        Mockito.doReturn(experience).when(experienceRepository).findByCountry("Tunis");
+        experience.setCountry("Tunisie");
+        List<Experience> experiences = Arrays.asList(experience);
+        Mockito.doReturn(experiences).when(experienceRepository).findByCountry("Tunisie");
         //when
-        Experience result = experienceService.getOneExperienceByVilleName("Tunis");
+        List<Experience> result = experienceService.getExperienceByCountry("Tunisie");
         //then
-        Assert.assertNotNull(result.getExpId());
-        Assert.assertEquals("Tunis",result.getVilleName());
+        Assert.assertNotNull(result.get(0).getExpId());
+        Assert.assertEquals("Tunisie",result.get(0).getCountry());
     }
 
     @Test(expected = BadRequestException.class)

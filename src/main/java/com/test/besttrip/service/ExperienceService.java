@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ExperienceService {
 
@@ -24,13 +25,9 @@ public class ExperienceService {
         return experienceRepository.findAll();
     }
 
-    public Experience getOneExperienceByVilleName(String villeName) {
-        return experienceRepository.findOneByCountry(villeName);
-    }
 
 
-
-    public ArrayList<Experience> getExperienceByVilleName(String villeName) {
+    public List<Experience> getExperienceByVilleName(String villeName) {
         return experienceRepository.findByVilleName(villeName);
     }
     public ArrayList<Experience> findByVilleName(String name){
@@ -57,7 +54,7 @@ public class ExperienceService {
     //TODO //Done //Beta
     //get experiences by country
 
-    public ArrayList<Experience> getExperienceByCountry(String country) {
+    public List<Experience> getExperienceByCountry(String country) {
         return experienceRepository.findByCountry(country);
     }
 
