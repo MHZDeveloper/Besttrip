@@ -25,58 +25,17 @@ public class ExperienceService {
         return experienceRepository.findAll();
     }
 
-
-
     public List<Experience> getExperienceByVilleName(String villeName) {
         return experienceRepository.findByVilleName(villeName);
     }
-    public ArrayList<Experience> findByVilleName(String name){
-
-
-
-
-            Iterable <Experience> exp = getExperiences();
-            ArrayList<Experience> exp_ville = new ArrayList<Experience>() ;
-
-            exp.forEach( experience -> {
-
-                if (experience.getVilleName().equals(name)) {
-
-                    exp_ville.add(experience);
-                }
-            });
-
-            return exp_ville;
-
-    }
-
-
-    //TODO //Done //Beta
-    //get experiences by country
 
     public List<Experience> getExperienceByCountry(String country) {
         return experienceRepository.findByCountry(country);
     }
 
+    //get general mean by ville name
 
-
-    public ArrayList<Experience> findByCountry(String name){
-
-        Iterable <Experience> exp = getExperiences();
-        ArrayList<Experience> exp_country = new ArrayList<Experience>() ;
-
-        exp.forEach( experience -> {
-
-            if (experience.getCountry().equals(name)) {
-
-                exp_country.add(experience);
-            }
-        });
-        return exp_country;
-    }
-
-
-
+    //get general mean by country
 
     public void createExperience(Experience experience) {
         log.info("[an experience is created in "+experience.getVilleName()+"("+experience.getCountry()+")]");
@@ -85,6 +44,7 @@ public class ExperienceService {
 
     public void updateExperience(int id, Experience experience) {
         if (id == experience.getExpId()) {
+            log.info("[an experience is updated : "+experience.getVilleName()+"("+experience.getCountry()+")]");
             experienceRepository.save(experience);
         }
         else {
@@ -92,7 +52,10 @@ public class ExperienceService {
         }
     }
 
+    //check if id = experience.id else exception "bad request" TODO
+
     public void deleteExperience(int id, Experience experience) {
+        log.info("[an experience: "+experience.getVilleName()+"("+experience.getCountry()+") is deleted]");
         experienceRepository.delete(experience);
     }
 

@@ -28,25 +28,12 @@ public class ExperienceRestController {
     }
 
 
-
-
-
-
-
-    //TODO  //Done //Beta
-    //get experience by villeName
     @RequestMapping(
              method = RequestMethod.GET ,
              path="/api/besttrip/experiences/ville={villeD}")
     public Iterable<Experience> getExperiencesByVille(@PathVariable("villeD") String ville){
         return experienceService.getExperienceByVilleName(ville);
 }
-
-
-
-    //TODO //Done //Beta
-    //get experiences by country
-
 
     @RequestMapping(
             method = RequestMethod.GET ,
@@ -55,11 +42,6 @@ public class ExperienceRestController {
     public Iterable<Experience> getExperiencesByCountry(@PathVariable("country") String country) {
         return experienceService.getExperienceByCountry(country);
     }
-
-
-
-
-
 
     @RequestMapping(
             method = RequestMethod.POST,
@@ -77,7 +59,7 @@ public class ExperienceRestController {
         experienceService.updateExperience(id,experience);
     }
 
-
+    //delete experience TODO
 
 }
 

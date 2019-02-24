@@ -36,8 +36,6 @@ public class AccountService {
         }
     }
 
-    //TODO //Done //Beta
-    //update account
 
     public void updateAccount(String login, Account account) {
         if (login.equals(account.getLogin())) {
@@ -48,8 +46,6 @@ public class AccountService {
         }
     }
 
-    //TODO //Done //Beta
-    //delete account
     public void deleteExperience(String Login, Account account) {
         accountRepository.delete(account);
     }

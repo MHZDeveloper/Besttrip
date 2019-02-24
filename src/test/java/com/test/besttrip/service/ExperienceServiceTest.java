@@ -56,6 +56,8 @@ public class ExperienceServiceTest {
         Assert.assertEquals("Tunis",result.get(0).getVilleName());
     }
 
+    // test for get experience by villename TODO
+
     @Test
     public void should_return_experience_by_country_from_database() {
         //given
@@ -78,5 +80,7 @@ public class ExperienceServiceTest {
         //when
         experienceService.updateExperience(2,experience);
     }
+
+    //test bad request for delete method TODO
 
 }
