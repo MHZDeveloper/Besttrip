@@ -14158,3 +14158,45 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.boot.bind.Relax
 2019-02-25 10:01:39.115  INFO --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-02-25 10:01:39.117  INFO --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-02-25 10:01:39.119  INFO --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-25 10:09:41.316  INFO --- [main] com.test.besttrip.BesttripApplication    : Starting BesttripApplication on mhz-HP-15-Notebook-PC with PID 7378 (/home/mhz/IdeaProjects/Besttrip/target/classes started by mhz in /home/mhz/IdeaProjects/Besttrip)
+2019-02-25 10:09:41.320  INFO --- [main] com.test.besttrip.BesttripApplication    : No active profile set, falling back to default profiles: default
+2019-02-25 10:09:42.565  INFO --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-25 10:09:42.618  INFO --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 2 repository interfaces.
+2019-02-25 10:09:42.920  INFO --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$436a3f0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-25 10:09:43.157  INFO --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-25 10:09:43.180  INFO --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-25 10:09:43.187  INFO --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-25 10:09:43.187  INFO --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-25 10:09:43.192  INFO --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-02-25 10:09:43.255  INFO --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-25 10:09:43.256  INFO --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1881 ms
+2019-02-25 10:09:43.608  INFO --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-02-25 10:09:43.671  INFO --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-25 10:09:43.869  INFO --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-25 10:09:43.904  INFO --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-25 10:09:43.950  INFO --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-25 10:09:43.951  INFO --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-25 10:09:44.036  INFO --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-25 10:09:44.102  INFO --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+2019-02-25 10:09:44.166  INFO --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+2019-02-25 10:09:44.620  INFO --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-25 10:09:45.070  INFO --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-25 10:09:45.099  WARN --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-25 10:09:45.164  INFO --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-02-25 10:09:45.301  INFO --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2019-02-25 10:09:45.414  INFO --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-25 10:09:45.464  INFO --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-25 10:09:45.478  INFO --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-25 10:09:45.480  INFO --- [main] com.test.besttrip.BesttripApplication    : Started BesttripApplication in 4.509 seconds (JVM running for 5.19)
+2019-02-25 10:09:45.769  INFO --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as abcfca5e693f
+2019-02-25 10:09:45.840  INFO --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-25 10:09:45.840  INFO --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-25 10:09:45.848  INFO --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-02-25 10:11:14.660  INFO --- [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia-actuator-endpoint: No access restrictor found, access to any MBean is allowed
+2019-02-25 10:13:49.198  INFO --- [Thread-15] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2019-02-25 10:13:49.199  INFO --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-25 10:13:49.200  INFO --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-25 10:13:49.201  INFO --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-25 10:13:49.202  INFO --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
