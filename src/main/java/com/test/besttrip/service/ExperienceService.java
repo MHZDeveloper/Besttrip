@@ -33,9 +33,24 @@ public class ExperienceService {
         return experienceRepository.findByCountry(country);
     }
 
-    //get general mean by ville name
 
-    //get general mean by country
+    public int getGeneralMeanByVilleName(String villeName){
+        int recommandationSum = 0;
+        List<Experience> list = getExperienceByVilleName(villeName);
+        for (int i=0;i<list.size();i++){
+            recommandationSum += list.get(i).getMeanRecommandation();
+        }
+        return recommandationSum/list.size();
+    }
+
+    public int getGeneralMeanByCountry(String countryname){
+        int recommandationSum = 0;
+        List<Experience> list = getExperienceByCountry(countryname);
+        for (int i=0;i<list.size();i++){
+            recommandationSum += list.get(i).getMeanRecommandation();
+        }
+        return recommandationSum/list.size();
+    }
 
     public void createExperience(Experience experience) {
         log.info("[an experience is created in " + experience.getVilleName() + "(" + experience.getCountry() + ")]");

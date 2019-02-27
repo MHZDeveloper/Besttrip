@@ -56,8 +56,6 @@ public class ExperienceServiceTest {
         Assert.assertEquals("Tunis",result.get(0).getVilleName());
     }
 
-    // test for get experience by villename TODO
-
     @Test
     public void should_return_experience_by_villename_from_database() {
         //given
@@ -96,6 +94,51 @@ public class ExperienceServiceTest {
         experienceService.updateExperience(2,experience);
     }
 
-    //test bad request for delete method TODO
+    @Test
+    public void should_return_correct_villename_mean(){
+        //given
+        Experience experience1 = new Experience();
+        experience1.setVilleName("Tunis");
+        experience1.setSommeRecommandation(5);
+        experience1.setRecommandationNumber(2);
+
+        Experience experience2 = new Experience();
+        experience2.setVilleName("Tunis");
+        experience2.setSommeRecommandation(6);
+        experience2.setRecommandationNumber(3);
+
+        List<Experience> experiences = Arrays.asList(experience1,experience2);
+        Mockito.doReturn(experiences).when(experienceRepository).findByVilleName("Tunis");
+
+        //when
+        int result = experienceService.getGeneralMeanByVilleName("Tunis");
+
+        //then
+        Assert.assertEquals(2,result);
+    }
+
+    @Test
+    public void should_return_correct_country_mean(){
+        //given
+        Experience experience1 = new Experience();
+        experience1.setCountry("Tunisie");
+        experience1.setSommeRecommandation(5);
+        experience1.setRecommandationNumber(2);
+
+        Experience experience2 = new Experience();
+        experience2.setCountry("Tunisie");
+        experience2.setSommeRecommandation(6);
+        experience2.setRecommandationNumber(3);
+
+        List<Experience> experiences = Arrays.asList(experience1,experience2);
+        Mockito.doReturn(experiences).when(experienceRepository).findByCountry("Tunisie");
+
+        //when
+        int result = experienceService.getGeneralMeanByCountry("Tunisie");
+
+        //then
+        Assert.assertEquals(2,result);
+    }
+
 
 }
