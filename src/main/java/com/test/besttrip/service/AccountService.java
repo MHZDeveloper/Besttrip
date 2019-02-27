@@ -46,7 +46,7 @@ public class AccountService {
         }
     }
 
-    public void deleteExperience(String Login, Account account) {
+    public void deleteAccount(String Login, Account account) {
         accountRepository.delete(account);
     }
 

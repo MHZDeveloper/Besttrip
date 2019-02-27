@@ -59,7 +59,16 @@ public class ExperienceRestController {
         experienceService.updateExperience(id,experience);
     }
 
-    //delete experience TODO
+
+    //delete experience TODO // Done //Beta
+
+    @RequestMapping(
+            method = RequestMethod.DELETE,
+            path = "/api/besttrip/experiences/{Expid}"
+                )
+    public void Experience(@PathVariable("Expid") int Expid){
+        experienceService.deleteExperience(Expid);
+    }
 
 }
 

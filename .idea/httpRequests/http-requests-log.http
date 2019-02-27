@@ -1,3 +1,309 @@
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-27T120710.200.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/4
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-27T120652.500.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-27T120636.200.json
+
+###
+
+POST http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-27T120556.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-26T115758.200.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/3
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-26T115724.200.json
+
+###
+
+POST http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-26T114328.200.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-26T114317.405.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-26T113936.500.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-26T113748.405.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-26T113733.200.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T105627.500.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T105536.500.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T104909.500.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T104410.500.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T104352.200.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T104315.500.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T104100.500.json
+
+###
+
+DELETE http://localhost:8080/api/besttrip/experiences/2
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T103742.500.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/ville=Nairobi
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T103725.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+<> 2019-02-25T103701.200.json
+
+###
+
+POST http://localhost:8080/api/besttrip/experiences
+Accept: */*
+Content-Type: application/json
+
+{   "account": null,   "villeName": "Nairobi",   "country": "Kenya",   "description": "a lovely place",   "photos": [     "Photos1",     "Photos2"   ],   "sommeRecommandation": 5,   "recommandationNumber": 1,   "meanRecommandation": 5 }
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/country=Maroc?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T100947.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/country=Maroc?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T100823.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T100646.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/ville=Maroc?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T100640.200.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences/1?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T100630.405.json
+
+###
+
+GET http://localhost:8080/api/besttrip/experiences?villeD=Casablanca&country=Tunisia
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T100613.200.json
+
+###
+
 GET http://localhost:8080/api/besttrip/experiences/ville=Casablanca
 Accept: */*
 Content-Type: application/json
@@ -135,54 +441,6 @@ Accept: */*
 Cache-Control: no-cache
 
 <> 2019-02-17T073605.200.json
-
-###
-
-GET http://localhost:8080/api/besttrip/experiences
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-02-17T073524.200.json
-
-###
-
-GET http://localhost:8080/api/besttrip/exeriences
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-02-17T073503.404.json
-
-###
-
-GET http://localhost:8080/api/besttrip/accounts
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-02-16T083351.200.json
-
-###
-
-GET http://localhost:8080/api/besttrip/experiences
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-02-16T083341.200.json
-
-###
-
-GET http://localhost:8080/api/besttrip/experiences
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-02-16T053758.200.json
-
-###
-
-GET http://localhost:8080/resources
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-02-16T053658.404.json
 
 ###
 

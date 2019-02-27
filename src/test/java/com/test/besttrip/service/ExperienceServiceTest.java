@@ -59,6 +59,21 @@ public class ExperienceServiceTest {
     // test for get experience by villename TODO
 
     @Test
+    public void should_return_experience_by_villename_from_database() {
+        //given
+        Experience experience = new Experience();
+        experience.setVilleName("Tunis");
+        List<Experience> experiences = Arrays.asList(experience);
+        Mockito.doReturn(experiences).when(experienceRepository).findByVilleName("Tunis");
+        //when
+        List<Experience> result = experienceService.getExperienceByVilleName("Tunis");
+        //then
+        Assert.assertNotNull(result.get(0).getExpId());
+        Assert.assertEquals("Tunis",result.get(0).getVilleName());
+    }
+
+
+    @Test
     public void should_return_experience_by_country_from_database() {
         //given
         Experience experience = new Experience();

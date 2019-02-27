@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public interface ExperienceRepository extends CrudRepository<Experience,String> {
+public interface ExperienceRepository extends CrudRepository<Experience,Integer> {
 
     List<Experience> findByCountry(String name);
     List<Experience> findByVilleName(String name);
+
+    void deleteExperienceByExpId(int ExpId);
 }
