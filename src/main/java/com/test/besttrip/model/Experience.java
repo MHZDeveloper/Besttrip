@@ -14,11 +14,11 @@ public class Experience {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="EXP_ID")
+    @Column(name = "EXP_ID")
     private int expId;
 
     @ManyToOne
-    @JoinColumn(name ="ID")
+    @JoinColumn(name = "ID")
     private Account account;
 
     @Column(name = "VILLE_NAME")
@@ -35,26 +35,11 @@ public class Experience {
     @CollectionTable(name = "PHOTOS")
     private List<String> photos;
 
-    @Column(name = "RECOMMANDATION_SUM")
-    private int sommeRecommandation;
+    @OneToMany(mappedBy = "experience", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Rank> ranks;
 
-    @Column(name = "RECOMMANDATION_NUMBER")
-    private int recommandationNumber;
-
-
-    public double getMeanRecommandation(){
-        return sommeRecommandation/recommandationNumber;
+    public Experience() {
     }
-
-    public double updateMeanRecommandation(int rank){
-        return (sommeRecommandation+rank)/(recommandationNumber++);
-    }
-
-    public Experience(int expId) {
-        this.expId = expId;
-    }
-
-    public Experience (){}
 
     public int getExpId() {
         return expId;
@@ -104,19 +89,24 @@ public class Experience {
         this.country = country;
     }
 
-    public int getSommeRecommandation() {
-        return sommeRecommandation;
+    public List<Rank> getRanks() {
+        return ranks;
     }
 
-    public void setSommeRecommandation(int moyenneRecommandation) {
-        this.sommeRecommandation = moyenneRecommandation;
+    public void setRanks(List<Rank> ranks) {
+        this.ranks = ranks;
     }
 
-    public int getRecommandationNumber() {
-        return recommandationNumber;
-    }
-
-    public void setRecommandationNumber(int recommandationNumber) {
-        this.recommandationNumber = recommandationNumber;
+    public int getMeanRank() {
+        if (ranks.size() > 0) {
+            int sum = 0;
+            for (Rank rank : ranks) {
+                sum += rank.getRankNumber().getValue();
+            }
+            return sum / ranks.size();
+        }
+        else {
+            return 3;
+        }
     }
 }

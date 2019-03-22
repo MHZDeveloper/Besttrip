@@ -22,7 +22,7 @@ public class AccountRestController {
             method = RequestMethod.GET,
             path = "/api/besttrip/accounts",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Account> getAccounts(){
+    public Iterable<Account> getAccounts() {
         return accountService.getAccounts();
     }
 
@@ -31,7 +31,9 @@ public class AccountRestController {
             path = "/api/besttrip/accounts",
             consumes = MediaType.APPLICATION_JSON_VALUE
     )
-    public void createAccount(@RequestBody Account account){
+    public void createAccount(@RequestBody Account account) {
         accountService.createAccount(account);
     }
+
+
 }

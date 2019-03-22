@@ -4,7 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ExperienceTest {
 
@@ -18,27 +19,17 @@ public class ExperienceTest {
     @Test
     public void should_return_the_right_recommadation_mean(){
         //given
-        experience.setSommeRecommandation(12);
-        experience.setRecommandationNumber(6);
 
+        List<Rank> ranks = new ArrayList<>();
+        ranks.add(new Rank(2));
+        ranks.add(new Rank(4));
+
+        experience.setRanks(ranks);
         //when
-        double result = experience.getMeanRecommandation();
+        int result = experience.getMeanRank();
 
         //then
-        Assert.assertEquals(2.0,result,0.0001);
-    }
-
-    @Test
-    public void should_update_the_recommadation_mean(){
-        //given
-        experience.setSommeRecommandation(18);
-        experience.setRecommandationNumber(9);
-
-        //when
-        double result = experience.updateMeanRecommandation(2);
-
-        //then
-        Assert.assertEquals(2.0,result,0.0001);
+        Assert.assertEquals(3,result);
     }
 
 }

@@ -1,11 +1,11 @@
 package com.test.besttrip.service;
 
+import com.test.besttrip.model.Account;
 import com.test.besttrip.model.Experience;
 import com.test.besttrip.model.repository.ExperienceRepository;
 import com.test.besttrip.service.exception.BadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 import java.util.List;
 
@@ -33,12 +33,11 @@ public class ExperienceService {
         return experienceRepository.findByCountry(country);
     }
 
-
     public int getGeneralMeanByVilleName(String villeName){
         int recommandationSum = 0;
         List<Experience> list = getExperienceByVilleName(villeName);
-        for (int i=0;i<list.size();i++){
-            recommandationSum += list.get(i).getMeanRecommandation();
+        for (Experience aList : list) {
+            recommandationSum += aList.getMeanRank();
         }
         return recommandationSum/list.size();
     }
@@ -46,15 +45,23 @@ public class ExperienceService {
     public int getGeneralMeanByCountry(String countryname){
         int recommandationSum = 0;
         List<Experience> list = getExperienceByCountry(countryname);
-        for (int i=0;i<list.size();i++){
-            recommandationSum += list.get(i).getMeanRecommandation();
+        for (Experience aList : list) {
+            recommandationSum += aList.getMeanRank();
         }
         return recommandationSum/list.size();
     }
 
-    public void createExperience(Experience experience) {
-        log.info("[an experience is created in " + experience.getVilleName() + "(" + experience.getCountry() + ")]");
-        experienceRepository.save(experience);
+    public void createExperience(Experience experience, String login) {
+
+        Account account = accountService.getAccount(login);
+        if (account !=null){
+            log.info("[an experience is created in " + experience.getVilleName() + "(" + experience.getCountry() + ")]");
+            experience.setAccount(account);
+            experienceRepository.save(experience);
+        }
+        else {
+            throw new BadRequestException("Bad Request");
+        }
     }
 
     public void updateExperience(int id, Experience experience) {
@@ -66,18 +73,14 @@ public class ExperienceService {
         }
     }
 
-    //check if id = experience.id else exception "bad request" TODO //DONE //beta
-
     public void deleteExperience(int id) {
         if (experienceRepository.findById(id).isPresent()){
             log.info("[an experience with the id : " + id + " is deleted]");
             experienceRepository.deleteById(id);
 
-        }else { throw  new BadRequestException("Bad Delete Request");
-                    }
-
-
-
+        }else {
+            throw  new BadRequestException("Bad Delete Request");
+        }
     }
 
 }
